@@ -1,0 +1,28 @@
+version: "3.9"
+
+services: 
+  mongodb: 
+    image: mongo:latest
+    container_name: mongodb_container
+    ports:
+      - "27017:27017"
+    environment: # Corrección: "environment" en lugar de "enviroment"
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Light16082002.
+    volumes:
+      - db-data-mongo:/data/db # Corrección: espacio entre ":" y "/"
+
+  redis: # Corrección: nombre del servicio en minúscula
+    image: redis:latest
+    container_name: redis_container
+    ports: 
+      - "6379:6379"
+    volumes:
+      - db-data-redis:/data # Corrección: espacio entre ":" y "/"
+
+volumes:
+  db-data-mongo:
+  db-data-redis:
+
+  
+
