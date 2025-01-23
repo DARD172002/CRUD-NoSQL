@@ -6,11 +6,11 @@ services:
     container_name: mongodb_container
     ports:
       - "27017:27017"
-    environment: # Corrección: "environment" en lugar de "enviroment"
+    environment: 
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: Light16082002.
     volumes:
-      - db-data-mongo:/data/db # Corrección: espacio entre ":" y "/"
+      - db-data-mongo:/data/db 
 
   redis: # Corrección: nombre del servicio en minúscula
     image: redis:latest
@@ -18,7 +18,7 @@ services:
     ports: 
       - "6379:6379"
     volumes:
-      - db-data-redis:/data # Corrección: espacio entre ":" y "/"
+      - db-data-redis:/data 
 
 volumes:
   db-data-mongo:
