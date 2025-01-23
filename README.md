@@ -41,3 +41,29 @@ Verifique que los contenedores estén funcionando correctamente:
 sudo docker ps -a
 
 
+3. Instalación de MongoDB Compass
+Descargue el archivo .deb desde la página oficial de MongoDB Compass.
+Instale el paquete descargado:
+sudo dpkg -i mongodb-compass_1.45.1_amd64.deb
+
+4. Instalación de Redis Commander
+Instale Redis Commander utilizando npm:
+npm install -g redis-commander
+
+Inicie Redis Commander:
+redis-commander
+
+
+5. Scripts de Prueba
+Prepare los scripts en JavaScript para realizar las operaciones de creación, lectura, actualización y eliminación tanto en MongoDB como en Redis.
+Ejecute los scripts y registre los tiempos de ejecución promedio. Cada operación debe ser ejecutada 5 veces para obtener el tiempo promedio.
+6. Ejecutar las Pruebas
+Las pruebas se realizarán para cada operación de la siguiente manera:
+
+Create: Inserción masiva de datos.
+Read: Consulta por clave primaria (ID), filtrado y búsquedas agregadas.
+Update: Actualización de registros con valores específicos.
+Delete: Eliminación de registros con valores específicos.
+
+
+
