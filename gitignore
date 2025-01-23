@@ -1,2 +1,4 @@
 .test/RedisDB/.env
 .test/mongoDB/.env
+./test/RedisDB/node_module
+./test/mongoDB/node_modules
